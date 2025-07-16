@@ -12,7 +12,7 @@
 
 <p>  Trabajo diseñado con HTML5, flexbox, grid, pseudoclases y bootstrap
   
-  Se trabajo en el la barra de navegación dejandola fija arriba con flex para todas las páginas igual en todos las páginas.
+  Se trabajo en el la barra de navegación dejandola fija arriba con flex para todas las páginas.
   
   HOME: se diseño con grid.
   
