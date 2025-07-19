@@ -73,8 +73,9 @@ footer {
   filter: drop-shadow(10px 10px 10px #303232);
 }
 .logo img {
-  width: 800px;
-  height: 100px;
+  width: 50rem;
+  height: 6.25rem;
+  margin-bottom: 1.5rem 0;
 }
 /*index*/
 h1 {
@@ -139,10 +140,12 @@ h1 {
 .text-left {
   grid-area: text-left;
   text-align: justify;
+  padding: 1rem;
 }
 .text-right {
   grid-area: text-right;
   text-align: justify;
+  padding: 1rem;
 }
 .secondary-title1 {
   grid-area: secondary-title1;
@@ -166,6 +169,7 @@ h1 {
 .text-left1 {
   grid-area: text-left1;
   text-align: justify;
+  padding: 1rem;
 }
 .secondary-title4 {
   grid-area: secondary-title4;
@@ -176,11 +180,12 @@ h1 {
 .text-right1 {
   grid-area: text-right1;
   text-align: justify;
+  padding: 1rem;
 }
 .whatsapp {
   position: fixed;
   right: 2rem;
-  bottom: 2rem;
+  bottom: 3.5rem;
   z-index: 4;
 }
 .logo-whatsapp {
@@ -193,6 +198,8 @@ h1 {
   text-align: center;
   height: 30px;
   margin: 1rem 0;
+}
+.footer p {
   color: #f0f0f0;
 }
 .footer p a {
@@ -303,6 +310,13 @@ input[type="text"] {
 input[type="password"] {
   text-align: center;
 }
+.button-ingresar .btn-primary {
+  background-color: #158cba;
+}
+.button-ingresar .btn-primary:hover {
+  background-color: #136788;
+  color: #f4f9f9;
+}
 
 /*contacto*/
 .contacto-primary {
@@ -342,7 +356,55 @@ input[type="password"] {
 .logo-whatsapp-contacto {
   display: none;
 }
+.btn-enviar .btn-primary {
+  background-color: #158cba;
+}
+.btn-enviar .btn-primary:hover {
+  background-color: #136788;
+  color: #f4f9f9;
+}
+
 /*medias query*/
+@media (max-width: 1400px) {
+  .container,
+  .nav-bar,
+  .nav-bar01,
+  footer {
+    width: 100%;
+  }
+
+  .logo img {
+    width: 45rem;
+    height: 5.25rem;
+  }
+
+  .main-Conteiner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img1 img2"
+      "secondary-title1 secondary-title2"
+      "text-left text-right"
+      "img3 img4"
+      "secondary-title3 secondary-title4"
+      "text-left1 text-right1";
+  }
+  .content {
+    text-align: center;
+  }
+
+  .nav-bar ul li {
+    margin: 1rem;
+  }
+  .whatsapp {
+    right: 2rem;
+    bottom: 5rem;
+    z-index: 4;
+  }
+  .logo-whatsapp {
+    width: 3rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .container,
   .nav-bar,
@@ -352,8 +414,8 @@ input[type="password"] {
   }
 
   .logo img {
-    width: 90%;
-    height: auto;
+    width: 40rem;
+    height: 4.75rem;
   }
 
   .main-Conteiner {
@@ -444,8 +506,8 @@ input[type="password"] {
     width: 3rem;
   }
   .whatsapp {
-    right: 0.5rem;
-    bottom: 3.75rem;
+    right: 2.5rem;
+    bottom: 5.75rem;
     z-index: 4;
   }
   .whatsapp .logo-whatsapp {
@@ -475,8 +537,11 @@ input[type="password"] {
     margin: 2px;
     padding: 1px;
   }
+
   .logo img {
-    margin-top: 4rem;
+    width: 35rem !important;
+    height: 4.75rem !important;
+    margin-top: 5rem;
   }
 
   .main-Conteiner {
@@ -506,11 +571,6 @@ input[type="password"] {
 
   h1 {
     font-size: 28px;
-  }
-
-  .logo img {
-    width: 100%;
-    height: auto;
   }
 
   .service1,
@@ -555,6 +615,7 @@ input[type="password"] {
     width: 50%;
     margin-top: 5rem;
   }
+  /*contacto */
   .contacto-primary {
     grid-template-areas:
       "contacto-siguenos "
@@ -590,6 +651,11 @@ input[type="password"] {
   .whatsapp .logo-whatsapp {
     width: 3rem;
   }
+  .logo img {
+    width: 30rem !important;
+    height: 4.75rem !important;
+    margin-top: 5rem;
+  }
 }
 @media (max-width: 480px) {
   h1 {
@@ -603,7 +669,11 @@ input[type="password"] {
     font-size: 14px;
     padding: 8px;
   }
-
+  .logo img {
+    width: 25rem !important;
+    height: 4.75rem !important;
+    margin-top: 5rem;
+  }
   .text-footer {
     font-size: 10px;
     text-align: center;
@@ -629,7 +699,7 @@ input[type="password"] {
 
   /*panel de control*/
   .img-panel-control .logo-panel-control {
-    width: 50%;
+    width: 0.1rem;
     margin-top: 5rem;
   }
   /*contacto*/
