@@ -53,6 +53,8 @@ footer {
   text-decoration: none;
   position: relative;
   padding: 10px;
+  font-size: 0.75rem;
+  font-weight: bolder;
 }
 .nav-bar ul li a:hover {
   color: #323232;
@@ -73,7 +75,7 @@ footer {
   filter: drop-shadow(10px 10px 10px #303232);
 }
 .logo img {
-  width: 50rem;
+  width: 40rem;
   height: 6.25rem;
   margin-bottom: 1.5rem 0;
 }
@@ -184,12 +186,12 @@ h1 {
 }
 .whatsapp {
   position: fixed;
-  right: 2rem;
-  bottom: 3.5rem;
+  right: 0.1rem;
+  bottom: 3.75rem;
   z-index: 4;
 }
 .logo-whatsapp {
-  width: 5rem;
+  width: 4rem;
 }
 .logo-whatsapp:hover {
   width: 6rem;
@@ -251,9 +253,9 @@ h1 {
   grid-template-areas: " wireles-img container-table1";
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
+  gap: 10px;
   text-align: center;
   align-items: center;
-  gap: 10px;
   margin-bottom: 2rem;
 }
 .wireless-img {
@@ -267,6 +269,56 @@ h1 {
 }
 .container-table1 {
   grid-area: container-table1;
+}
+
+/*quienes somos*/
+.title-quienes {
+  text-decoration: underline;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.historia {
+  display: grid;
+  grid-template-areas:
+    "text-historia img-edificio"
+    "img-crecimiento text-crecimiento"
+    "text-ideas img-ideas";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+.text-historia {
+  grid-area: text-historia;
+  margin: auto 0;
+  text-align: justify;
+}
+.img-edificio {
+  grid-area: img-edificio;
+  width: 30rem;
+  margin: 0 4rem;
+  border-radius: 1rem;
+}
+.img-crecimiento {
+  grid-area: img-crecimiento;
+  width: 30rem;
+  margin: 0 1.5rem;
+  border-radius: 1rem;
+}
+.text-crecimiento {
+  grid-area: text-crecimiento;
+  margin: auto 0;
+  text-align: justify;
+}
+.text-ideas {
+  grid-area: text-ideas;
+  margin: auto 0;
+  text-align: justify;
+}
+.img-ideas {
+  grid-area: img-ideas;
+  width: 30rem;
+  margin: 0 4rem 2rem;
+  border-radius: 1rem;
 }
 
 /*panel de control*/
@@ -374,7 +426,7 @@ input[type="password"] {
   }
 
   .logo img {
-    width: 45rem;
+    width: 30rem;
     height: 5.25rem;
   }
 
@@ -396,12 +448,46 @@ input[type="password"] {
     margin: 1rem;
   }
   .whatsapp {
-    right: 2rem;
-    bottom: 5rem;
+    right: 1rem;
+    bottom: 3.5rem;
     z-index: 4;
   }
   .logo-whatsapp {
     width: 3rem;
+  }
+  /*quienes somos*/
+  .img-edificio,
+  .img-crecimiento,
+  .img-ideas {
+    width: 55%;
+    margin: 1rem auto;
+  }
+
+  .historia {
+    grid-template-areas:
+      "text-historia"
+      "img-edificio"
+      "text-crecimiento"
+      "img-crecimiento"
+      "text-ideas"
+      "img-ideas";
+    grid-template-columns: 1fr;
+  }
+
+  .text-historia,
+  .text-crecimiento,
+  .text-ideas {
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .title-quienes {
+    font-size: 1.5rem;
   }
 }
 
@@ -436,12 +522,12 @@ input[type="password"] {
     margin: 1rem;
   }
   .whatsapp {
-    right: 0rem;
-    bottom: 2rem;
+    right: 0.5rem;
+    bottom: 2.5rem;
     z-index: 4;
   }
   .logo-whatsapp {
-    width: 3rem;
+    width: 2rem;
   }
   /*servicios*/
   .service1 {
@@ -460,6 +546,43 @@ input[type="password"] {
   .img-ftth,
   .wireless-img {
     width: 50%;
+  }
+
+  /* quienes somos*/
+  @media (max-width: 1024px) {
+    .img-edificio,
+    .img-crecimiento,
+    .img-ideas {
+      width: 55%;
+      margin: 1rem auto;
+    }
+
+    .historia {
+      grid-template-areas:
+        "text-historia"
+        "img-edificio"
+        "text-crecimiento"
+        "img-crecimiento"
+        "text-ideas"
+        "img-ideas";
+      grid-template-columns: 1fr;
+    }
+
+    .text-historia,
+    .text-crecimiento,
+    .text-ideas {
+      padding: 0 1rem;
+      text-align: justify;
+    }
+
+    .logo img {
+      max-width: 27rem;
+      height: auto;
+    }
+
+    .title-quienes {
+      font-size: 1.5rem;
+    }
   }
   /*Panel de control
   .logo-panel-control {
@@ -507,7 +630,7 @@ input[type="password"] {
   }
   .whatsapp {
     right: 2.5rem;
-    bottom: 5.75rem;
+    bottom: 3rem;
     z-index: 4;
   }
   .whatsapp .logo-whatsapp {
@@ -526,7 +649,7 @@ input[type="password"] {
   }
   .nav-bar01 {
     flex-direction: column;
-    height: 7.5rem;
+    height: 9rem;
   }
 
   .nav-bar ul {
@@ -539,9 +662,9 @@ input[type="password"] {
   }
 
   .logo img {
-    width: 35rem !important;
-    height: 4.75rem !important;
-    margin-top: 5rem;
+    width: 35rem;
+    height: 4.75rem;
+    margin-top: 6rem !important;
   }
 
   .main-Conteiner {
@@ -588,9 +711,13 @@ input[type="password"] {
     width: 90%;
     margin: auto;
   }
-
+  .whatsapp {
+    right: 0rem;
+    bottom: 0.5rem;
+    z-index: 4;
+  }
   .logo-whatsapp {
-    width: 4rem;
+    width: 2rem;
   }
   /*servicios*/
   .service1 {
@@ -645,7 +772,7 @@ input[type="password"] {
   }
   .whatsapp {
     right: 0.5rem;
-    bottom: 3.75rem;
+    bottom: 1.75rem;
     z-index: 4;
   }
   .whatsapp .logo-whatsapp {
